@@ -1,0 +1,49 @@
+{%extends "base/base.html"%} {%block title%} All images. {%endblock%} {%block content%}
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap");
+
+  * {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 625;
+  }
+
+  h1 {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 256;
+  }
+</style>
+
+<div class="container">
+  <div class="py-5">
+    <div class="row">
+      {% for post in object_list %}
+      <div class="col-md-4">
+        <a class="text-dark" href="{{post.get_absolute_url}}">
+          <div class="card mb-4 shadow mb-5 bg-white rounded">
+            <div class="card-body text-center">
+              <img
+                class="card-img-top"
+                src="{{post.image.url}}"
+                alt="{{ post.title }}"
+              />
+              <p>{{post.title|truncatechars:50}}</p>
+              <p># {{post.id}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<section class="jumbotron text-center">
+  <div class="container" style="max-width: 625px">
+    <h1 class="txt-robo h1">
+      That's all of the images for now.
+    </h1>
+  </div>
+</section>
+
+{% include "base/footer.html" %} {%endblock%}

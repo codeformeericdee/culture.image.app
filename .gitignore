@@ -1,0 +1,7 @@
+secrets/
+global_symbols/
+user_symbols/
+db.sqlite3
+migrations/
+__pycache__/
+venv/Lib/
