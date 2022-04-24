@@ -6,7 +6,7 @@ Stay tuned there for more information and upcoming documentation and features.
 
 # Helpful commands:
 
-python manage.py migrate --run-syncdb
-python manage.py migrate --fake-initial
-python manage.py migrate --fake site_views
-python manage.py migrate --fake site_views zero
+python manage.py migrate --run-syncdb\
+python manage.py migrate --fake-initial\
+python manage.py migrate --fake site_views\
+python manage.py migrate --fake site_views zero\
