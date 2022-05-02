@@ -2,8 +2,6 @@
 
 # https://symbolicdatabase.com
 
-Stay tuned there for more information and upcoming documentation and features.
-
 # Helpful commands:
 
 python manage.py migrate --run-syncdb\
